@@ -18,20 +18,30 @@ var gum = {
    "Extra": 1.00,
    "DoubleMint": 2.00,
    "Trident": 3.00,
-  "Bubble Gum": 4.00
+  "BubbleGum": 4.00
 };
 
 })();
 
-document.getElementById("Extra").addEventListener("click", addPrice("Extra"));
+document.getElementById("Extra").addEventListener("click", function(){
+  gumShopping.addPrice("Extra");
+});
 
-document.getElementById("DoubleMint").addEventListener("click", addPrice("DoubleMint"));
+document.getElementById("DoubleMint").addEventListener("click", function(){
+  gumShopping.addPrice("DoubleMint");
+});
 
-document.getElementById("Trident").addEventListener("click", addPrice("Trident"));
+document.getElementById("Trident").addEventListener("click", function(){
+  gumShopping.addPrice("Trident");
+});
 
-document.getElementById("Bubble Gum").addEventListener("click",addPrice("Bubble Gum"))
+document.getElementById("BubbleGum").addEventListener("click", function(){
+  gumShopping.addPrice("BubbleGum");
+});
 
-document.getElementById("clearBtn").addEventListener("click", clear());
+document.getElementById("clearBtn").addEventListener("click", function(){
+  gumShopping.clear();
+});
 
 
 
