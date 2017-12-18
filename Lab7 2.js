@@ -1,26 +1,29 @@
 var gumShopping = (function (){
-
+  
+  var gum = {
+    "Extra": 1.25,
+    "DoubleMint": 2.25,
+    "Trident": 3.25,
+    "BubbleGum": 4.25
+ };
+ var total = 0;
+ var items = 0;
 return{
     addPrice: function(x){
-      var total = 0;
-      var newTotal = total + gum[x];
-      document.getElementById("cartTotal").textContent = newTotal;
+      items++;
+      total+= gum[x];
+      document.getElementById("cartItems").textContent = "Shopping Cart Items: " + items;
+      document.getElementById("cartTotal").textContent = "Shopping Cart Total: $ " + total;
 
     } ,
     clear: function(){
-      document.getElementById("cartItems").textContent = "Shopping Cart Items: 0";
-      document.getElementById("cartTotal").textContent = "Shopping Cart Total: 0";
+      total = 0;
+      items = 0;
+      document.getElementById("cartItems").textContent = "Shopping Cart Items: 0 ";
+      document.getElementById("cartTotal").textContent = "Shopping Cart Total: $0";
 
     }
   };
-
-var gum = {
-   "Extra": 1.00,
-   "DoubleMint": 2.00,
-   "Trident": 3.00,
-  "BubbleGum": 4.00
-};
-
 })();
 
 document.getElementById("Extra").addEventListener("click", function(){
